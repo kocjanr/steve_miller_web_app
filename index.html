@@ -7,293 +7,505 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Poiret One", sans-serif}
-body, html {
-    height: 100%;
-    line-height: 1.8;
-}
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Poiret One", sans-serif
+    }
 
-.bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: url("assets/vies-steve-miller-band-9.jpg");
-    min-height: 100%;
-}
-.w3-bar .w3-button {
-    padding: 16px;
-}
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("assets/vies-steve-miller-band-9.jpg");
+        min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
 </style>
+
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <img class="w3-hide-small" src="assets/smb_logo.png" width="15%">
-    <div class="w3-bar-item w3-button w3-wide w3-hide-xlarge w3-hide-large">Steve Miller Band</div>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-        <a href="#" class="w3-bar-item w3-button w3-large link">HOME</a>
-        <a href="#news" class="w3-bar-item w3-button w3-large link">NEWS</a>
-        <a href="#tour" class="w3-bar-item w3-button w3-large link">TOUR</a>
-        <a href="#history" class="w3-bar-item w3-button w3-large link">HISTORY</a>
-        <a href="#music" class="w3-bar-item w3-button w3-large link">MUSIC</a>
-        <a target="blank" href="https://stevemiller.fanfire.com/cgi-bin/WebObjects/Store.woa/wa/artist?sourceCode=SMIWEB&artistName=Steve+Miller" class="w3-bar-item w3-button w3-large link">MERCH</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-large link">CONTACT</a>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <img class="w3-hide-small" src="assets/smb_logo.png" width="15%">
+            <div class="w3-bar-item w3-button w3-wide w3-hide-xlarge w3-hide-large">Steve Miller Band</div>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#" class="w3-bar-item w3-button w3-large link">HOME</a>
+                <a href="#news" class="w3-bar-item w3-button w3-large link">NEWS</a>
+                <a href="#tour" class="w3-bar-item w3-button w3-large link">TOUR</a>
+                <a href="#history" class="w3-bar-item w3-button w3-large link">HISTORY</a>
+                <a href="#music" class="w3-bar-item w3-button w3-large link">MUSIC</a>
+                <a target="blank" href="https://stevemiller.fanfire.com/cgi-bin/WebObjects/Store.woa/wa/artist?sourceCode=SMIWEB&artistName=Steve+Miller"
+                    class="w3-bar-item w3-button w3-large link">MERCH</a>
+                <a href="#contact" class="w3-bar-item w3-button w3-large link">CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close Menu X</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
-  <a href="#news" onclick="w3_close()" class="w3-bar-item w3-button">NEWS</a>
-  <a href="#tour" onclick="w3_close()" class="w3-bar-item w3-button">TOUR</a>
-  <a href="#history" onclick="w3_close()" class="w3-bar-item w3-button">HISTORY</a>
-    <a href="#music" onclick="w3_close()" class="w3-bar-item w3-button">MUSIC</a>
-  <a href="https://stevemiller.fanfire.com/cgi-bin/WebObjects/Store.woa/wa/artist?sourceCode=SMIWEB&artistName=Steve+Miller" onclick="w3_close()" class="w3-bar-item w3-button">MERCH</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-  <div class="w3-xlarge w3-section">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-spotify w3-hover-opacity"></i>
-      </div>
-      <div class="w3-small">
-          Copyright 2018. Steve Miller Band
-      </div>
-</nav>
-
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min w3-hide-small" id="home">
-
-</header>
-
-<header class="sm-bg-img w3-display-container w3-grayscale-min w3-hide-large w3-hide-xlarge s1 - s12" id="home">
-    <img class="w3-image w3-center" src="assets/Steve-Miller-horse-no-text.png" width="100%" style="padding-top:100px; padding-left:25px;">
-</header>
-
-<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="news">
-        <div class="w3-content">
-          <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">NEWS</h1>
-          <div class="w3-row w3-left">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/GR2mTr_BLYo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe><br>
-              <a class="w3-small" target="blank" href="http://www.axs.tv/originals/the-big-interview-with-dan-rather-steve-miller-sneak-peek/">THE BIG INTERVIEW WITH DAN RATHER: STEVE MILLER</a>
-              <div class="w3-medium">
-                  It’s amazing to look back at how many hits the Steve Miller Band produced in the 70s and 80s. After performing together for more than five decades, the band’s music has proven to be timeless.
-                  In this first look at Steve Miller’s conversation with Dan, Miller breaks down some of his band’s greatest hits, including “The Joker” and “Space Cowboy.” When asked about what the “Space Cowboy” was all about, Miller responds to Dan, “Well, that’s a champion of justice, you’re the ‘Space Cowboy.'” Without skipping a beat, Dan says in return with a grin on his face, “Damned if I’m not…” Watch their entire conversation on a new episode of The Big Interview, premiering Tuesday, November 14th at 9/8c on AXS TV.
-              </div>
-          </div>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close Menu X</a>
+        <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+        <a href="#news" onclick="w3_close()" class="w3-bar-item w3-button">NEWS</a>
+        <a href="#tour" onclick="w3_close()" class="w3-bar-item w3-button">TOUR</a>
+        <a href="#history" onclick="w3_close()" class="w3-bar-item w3-button">HISTORY</a>
+        <a href="#music" onclick="w3_close()" class="w3-bar-item w3-button">MUSIC</a>
+        <a href="https://stevemiller.fanfire.com/cgi-bin/WebObjects/Store.woa/wa/artist?sourceCode=SMIWEB&artistName=Steve+Miller"
+            onclick="w3_close()" class="w3-bar-item w3-button">MERCH</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+        <div class="w3-xlarge w3-section">
+            <a href="http://www.facebook.com/stevemillerband" target="blank">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.instagram.com/stevemillerband.official/" target="blank">
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+            </a>
+            <a href="https://twitter.com/SMBofficial" target="blank">
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+            </a>
+            <a href="https://open.spotify.com/artist/6QtGlUje9TIkLrgPZrESuk?si=1XBzUKiYQfm2r8hcuDaMeg" target="blank">
+                <i class="fa fa-spotify w3-hover-opacity"></i>
+            </a>
         </div>
-      </div>
-      
-      <div class="w3-container w3-padding-64 w3-black w3-grayscale w3-xlarge" id="tour">
-        <div class="w3-content">
-          <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">TOUR</h1>
-          <table>
-                  <tr bgcolor="#02090B">
-                          <td colspan="5" bgcolor="#220000" class="style10"><div align="center" class="style32">2018 SPRING TOUR WITH PETER FRAMPTON</div></td>
-                        </tr>
-                        <tr bgcolor="#02090B">
-                          <td width="15%" bgcolor="#000033" class="style10"><span class="style8">DATE</span></td>
-                          <td width="22%" bgcolor="#000033" class="style10"><span class="style8">LOCATION</span></td>
-                          <td width="20%" bgcolor="#000033" class="style10"><span class="style8">COUNTRY</span></td>
-                          <td width="29%" bgcolor="#000033" class="style10"><span class="style8">VENUE</span></td>
-                          <td width="14%" bgcolor="#000033" class="style10"><span class="style8">TICKETS</span></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 14, 2018</td>
-                          <td bgcolor="#2E304C" class="style20">Victoria, BC</td>
-                          <td bgcolor="#2E304C" class="style20">Canada</td>
-                          <td bgcolor="#2E304C" class="style20">Save On Foods Center</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="https://goo.gl/exQtyv" target="_blank">Tickets</a></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 16</td>
-                          <td bgcolor="#2E304C" class="style20">Vancouver, BC</td>
-                          <td bgcolor="#2E304C" class="style20">Canada</td>
-                          <td bgcolor="#2E304C" class="style20">Abbotsford Centre</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="http://www.ticketmaster.ca/event/11005386C2AC79AD" target="_blank">Tickets</a></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 18</td>
-                          <td bgcolor="#2E304C" class="style20">Kelona, BC</td>
-                          <td bgcolor="#2E304C" class="style20">Canada</td>
-                          <td bgcolor="#2E304C" class="style20">Prospera Place</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="https://goo.gl/1s8hy1" target="_blank">Tickets</a></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 20</td>
-                          <td bgcolor="#2E304C" class="style20">Calgary, AB</td>
-                          <td bgcolor="#2E304C" class="style20">Canada</td>
-                          <td bgcolor="#2E304C" class="style20">Scotiabank Saddledome</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="http://www.ticketmaster.ca/event/11005388B2575CA7" target="_blank">Tickets</a></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 21</td>
-                          <td bgcolor="#2E304C" class="style20">Edmonton, AB</td>
-                          <td bgcolor="#2E304C" class="style20">Canada</td>
-                          <td bgcolor="#2E304C" class="style20">Rogers Place</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="http://www.ticketmaster.ca/event/11005386A9906EFE" target="_blank">Tickets</a></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 23</td>
-                          <td bgcolor="#2E304C" class="style20">Saskatoon, SK</td>
-                          <td bgcolor="#2E304C" class="style20">Canada</td>
-                          <td bgcolor="#2E304C" class="style20">Sask Tel Centre</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="http://www.ticketmaster.ca/event/11005387B05D70B3" target="_blank">Tickets</a></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 24</td>
-                          <td bgcolor="#2E304C" class="style20">Winnipeg, MB</td>
-                          <td bgcolor="#2E304C" class="style20">Canada</td>
-                          <td bgcolor="#2E304C" class="style20">Bell MTS Place</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="http://www.ticketmaster.ca/event/11005387BA7776A5" target="_blank">Tickets</a></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 26</td>
-                          <td bgcolor="#2E304C" class="style20">Souix Falls, SD</td>
-                          <td bgcolor="#2E304C" class="style20">USA</td>
-                          <td bgcolor="#2E304C" class="style20">Denny Sanford Premier Center</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="#" target="_blank">Tickets</a></td>
-                        </tr>
-                        <tr bgcolor="#02090B" class="style10">
-                          <td bgcolor="#2E304C" class="style20">April 28</td>
-                          <td bgcolor="#2E304C" class="style20">New Town, ND</td>
-                          <td bgcolor="#2E304C" class="style20">USA</td>
-                          <td bgcolor="#2E304C" class="style20">Four Bears Resort</td>
-                          <td bgcolor="#2E304C" class="style10"><a href="#" target="_blank">Tickets</a></td>
-                        </tr>
-          </table>
-      
-          
+        <div class="w3-small">
+            Copyright 2018. Steve Miller Band
         </div>
-      </div>
-      
-      <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="history">
-          <div class="w3-content">
-              <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">HISTORY</h1>
-              <div class="w3-row w3-left">
-                  <div class="w3-medium">
-                          <img class="w3-image w3-center" src="http://www.stevemillerband.com/images/steve_bio2016.jpg" width="506" height="484" alt="Steve Miller" /><br>
-                      Steve Miller was a mainstay of the San Francisco music scene that upended American culture in the late '60s. With albums like Children of the Future, Sailor and Brave New World, Miller perfected a psychedelic blues sound that drew on the deepest sources of American roots music and simultaneously articulated a compelling vision of what music - and, indeed, society - could be in the years to come. Then, in the '70s, Miller crafted a brand of pure pop that was polished, exciting and irresistible - and that dominated radio in a way that few artists have ever managed. Hit followed hit in what seemed like an endless flow: "Take The Money and Run," "Rock'n Me," "Fly Like an Eagle," "Jet Airliner" and "Jungle Love," among them. To this day, those songs are instantly recognizable when they come on the radio - and impossible not to sing along with. Their hooks are the very definition of indelible. Running through Miller's distinctive catalog is a combination of virtuosity and song craft. His parents were jazz aficionados - not to mention close friends of Les Paul and Mary Ford - so, as a budding guitarist, Miller absorbed valuable lessons from that musical tradition. When the family moved to Texas, Miller deepened his education in the blues, eventually moving to Chicago, where he played with Muddy Waters, Howlin' Wolf, Buddy Guy and Paul Butterfield. In recent years, Miller has immersed himself in the blues once again. And, as always, whether he was riding the top of the charts or exploring the blue highways of American music, he is playing and singing with conviction and precision, passion and eloquence, and making records that are at once immediately accessible and more than able to stand the test of time. 
-                  </div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="music">
-          <div class="w3-content">
-              <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">MUSIC</h1>
-              <div class="w3-row w3-center">
-                  <iframe src="https://open.spotify.com/embed/artist/6QtGlUje9TIkLrgPZrESuk" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-              </div>
-          </div>
-      </div>
-      
-      <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="contact">
-              <div class="w3-content">
-                <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">CONTACT</h1>
-                <div class="w3-row w3-center">
-                    
-                    <div class="w3-medium">
-                      <form class="w3-center" action="https://stevemillerband.us1.list-manage.com/subscribe/post" method="POST">
-                          <input type="hidden" name="u" value="b42a4772de974b690bbebd628">
-                          <input type="hidden" name="id" value="b464554a3f">                  
-                          <table cellpadding="7" cellspacing="0" width="100%" align="center" class="mergeTable">
-                          <tbody id="mergeTable">
-                          <tr class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
-                          <td class="formText" align="right">
-                              <label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
-                          </td><td>
-                              <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
-      
-                              </td>
-                          </tr>
-                          <tr class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
-                          <td class="formText" align="right">
-                              <label for="MERGE1">First Name</label>
-                          </td><td>
-                              <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
-      
-                              </td>
-                          </tr>    
-                          </tbody>
-                          <tbody>
-                          <tr valign="top" id="merge-email_type-101" class="mergeRow mergeRow-interests-checkboxes">
-                              <td class="formText" align="right">
-                                  Preferred format
-                              </td>
-                              <td>
-                                  <fieldset><legend style="display:none;">Preferred format</legend>
-                                  <input type="radio" name="EMAILTYPE" id="EMAILTYPE_HTML" value="html" checked><label for="EMAILTYPE_HTML">HTML</label>&nbsp; &nbsp;
-                                  <input type="radio" name="EMAILTYPE" id="EMAILTYPE_TEXT" value="text" ><label for="EMAILTYPE_TEXT">Plain-text</label>&nbsp; &nbsp;
-                                  </fieldset>
-                              </td>
-                          </tr>
-                          
-                      
-                          <tr>
-                          <td>&nbsp;</td>
-                          <td class="mc_submit_button">
-                              <input type="submit" class="button" value="Subscribe to list">
-                          </td>
-                          </tr>
-                          </tbody>
-                          </table>
-                          <input type="hidden" name="ht" value="e9ffaddf180e6c9a8880174b91cee135cc33338e:MTUxNTM3NjExMS41MjE4">
-                          <input type="hidden" name="mc_signupsource" value="hosted">
-                      </form>
-                      
-                  </div>
-              </div>
-              </div>
-      </div>
+    </nav>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  
-  <div class="w3-xlarge w3-section w3-hide-small">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-spotify w3-hover-opacity"></i>
-  </div>
-  <div class="w3-small">
-      Copyright 2018. Steve Miller Band
-  </div>
-</footer>
- 
-<script>
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min w3-hide-small" id="home">
+
+    </header>
+
+    <header class="sm-bg-img w3-display-container w3-grayscale-min w3-hide-large w3-hide-xlarge s1 - s12" id="home">
+        <img class="w3-image w3-center" src="assets/Steve-Miller-horse-no-text.png" width="100%" style="padding-top:100px; padding-left:25px;">
+    </header>
+
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="news">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">NEWS</h1>
+            <div class="w3-row w3-left">
+                <iframe width="75%" src="https://www.youtube.com/embed/GR2mTr_BLYo" frameborder="0" gesture="media" allow="encrypted-media"
+                    allowfullscreen></iframe>
+                <br>
+                <a class="w3-small" target="blank" href="http://www.axs.tv/originals/the-big-interview-with-dan-rather-steve-miller-sneak-peek/">THE BIG INTERVIEW WITH DAN RATHER: STEVE MILLER</a>
+                <div class="w3-medium">
+                    It’s amazing to look back at how many hits the Steve Miller Band produced in the 70s and 80s. After performing together for
+                    more than five decades, the band’s music has proven to be timeless. In this first look at Steve Miller’s
+                    conversation with Dan, Miller breaks down some of his band’s greatest hits, including “The Joker” and
+                    “Space Cowboy.” When asked about what the “Space Cowboy” was all about, Miller responds to Dan, “Well,
+                    that’s a champion of justice, you’re the ‘Space Cowboy.'” Without skipping a beat, Dan says in return
+                    with a grin on his face, “Damned if I’m not…” Watch their entire conversation on a new episode of The
+                    Big Interview, premiering Tuesday, November 14th at 9/8c on AXS TV.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-padding-64 w3-black w3-grayscale w3-xlarge" id="tour">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">TOUR</h1>
+
+            <div class="w3-responsive">
+                <table class="w3-table-all">
+                    <tr bgcolor="#02090B">
+                        <td colspan="5" bgcolor="#220000" class="style10">
+                            <div align="center" class="style32">2018 SPRING TOUR WITH PETER FRAMPTON</div>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B">
+                        <td width="15%" bgcolor="#000033" class="style10">
+                            <span class="style8">DATE</span>
+                        </td>
+                        <td width="22%" bgcolor="#000033" class="style10">
+                            <span class="style8">LOCATION</span>
+                        </td>
+                        <td width="20%" bgcolor="#000033" class="style10">
+                            <span class="style8">COUNTRY</span>
+                        </td>
+                        <td width="29%" bgcolor="#000033" class="style10">
+                            <span class="style8">VENUE</span>
+                        </td>
+                        <td width="14%" bgcolor="#000033" class="style10">
+                            <span class="style8">TICKETS</span>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 14</td>
+                        <td bgcolor="#2E304C" class="style20">Victoria, BC</td>
+                        <td bgcolor="#2E304C" class="style20">Canada</td>
+                        <td bgcolor="#2E304C" class="style20">Save On Foods Center</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="https://goo.gl/exQtyv" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 16</td>
+                        <td bgcolor="#2E304C" class="style20">Vancouver, BC</td>
+                        <td bgcolor="#2E304C" class="style20">Canada</td>
+                        <td bgcolor="#2E304C" class="style20">Abbotsford Centre</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="http://www.ticketmaster.ca/event/11005386C2AC79AD" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 18</td>
+                        <td bgcolor="#2E304C" class="style20">Kelona, BC</td>
+                        <td bgcolor="#2E304C" class="style20">Canada</td>
+                        <td bgcolor="#2E304C" class="style20">Prospera Place</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="https://goo.gl/1s8hy1" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 20</td>
+                        <td bgcolor="#2E304C" class="style20">Calgary, AB</td>
+                        <td bgcolor="#2E304C" class="style20">Canada</td>
+                        <td bgcolor="#2E304C" class="style20">Scotiabank Saddledome</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="http://www.ticketmaster.ca/event/11005388B2575CA7" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 21</td>
+                        <td bgcolor="#2E304C" class="style20">Edmonton, AB</td>
+                        <td bgcolor="#2E304C" class="style20">Canada</td>
+                        <td bgcolor="#2E304C" class="style20">Rogers Place</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="http://www.ticketmaster.ca/event/11005386A9906EFE" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 23</td>
+                        <td bgcolor="#2E304C" class="style20">Saskatoon, SK</td>
+                        <td bgcolor="#2E304C" class="style20">Canada</td>
+                        <td bgcolor="#2E304C" class="style20">Sask Tel Centre</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="http://www.ticketmaster.ca/event/11005387B05D70B3" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 24</td>
+                        <td bgcolor="#2E304C" class="style20">Winnipeg, MB</td>
+                        <td bgcolor="#2E304C" class="style20">Canada</td>
+                        <td bgcolor="#2E304C" class="style20">Bell MTS Place</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="http://www.ticketmaster.ca/event/11005387BA7776A5" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 26</td>
+                        <td bgcolor="#2E304C" class="style20">Souix Falls, SD</td>
+                        <td bgcolor="#2E304C" class="style20">USA</td>
+                        <td bgcolor="#2E304C" class="style20">Denny Sanford Premier Center</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="#" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#02090B" class="style10">
+                        <td bgcolor="#2E304C" class="style20">April 28</td>
+                        <td bgcolor="#2E304C" class="style20">New Town, ND</td>
+                        <td bgcolor="#2E304C" class="style20">USA</td>
+                        <td bgcolor="#2E304C" class="style20">Four Bears Resort</td>
+                        <td bgcolor="#2E304C" class="style10">
+                            <a href="#" target="_blank">
+                                <input class="w3-button w3-red" type="button" value="Tickets">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="history">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">HISTORY</h1>
+            <div class="w3-row w3-left">
+                <div class="w3-medium">
+                    <div class="w3-center">
+                        <img class="w3-image" src="assets/smb_vintage_1.jpg">
+                        <img class="w3-image" src="assets/steve_bio2016.jpg" width="420">
+                    </div>
+                    Steve Miller was a mainstay of the San Francisco music scene that upended American culture in the late '60s. With albums
+                    like Children of the Future, Sailor and Brave New World, Miller perfected a psychedelic blues sound that
+                    drew on the deepest sources of American roots music and simultaneously articulated a compelling vision
+                    of what music - and, indeed, society - could be in the years to come. Then, in the '70s, Miller crafted
+                    a brand of pure pop that was polished, exciting and irresistible - and that dominated radio in a way
+                    that few artists have ever managed. Hit followed hit in what seemed like an endless flow: "Take The Money
+                    and Run," "Rock'n Me," "Fly Like an Eagle," "Jet Airliner" and "Jungle Love," among them. To this day,
+                    those songs are instantly recognizable when they come on the radio - and impossible not to sing along
+                    with. Their hooks are the very definition of indelible. Running through Miller's distinctive catalog
+                    is a combination of virtuosity and song craft. His parents were jazz aficionados - not to mention close
+                    friends of Les Paul and Mary Ford - so, as a budding guitarist, Miller absorbed valuable lessons from
+                    that musical tradition. When the family moved to Texas, Miller deepened his education in the blues, eventually
+                    moving to Chicago, where he played with Muddy Waters, Howlin' Wolf, Buddy Guy and Paul Butterfield. In
+                    recent years, Miller has immersed himself in the blues once again. And, as always, whether he was riding
+                    the top of the charts or exploring the blue highways of American music, he is playing and singing with
+                    conviction and precision, passion and eloquence, and making records that are at once immediately accessible
+                    and more than able to stand the test of time.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="music">
+        <div class="w3-mobile w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">MUSIC</h1>
+
+            <div class="w3-row">
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/children_of_the_future_front.jpg" width="200">
+                    <h5>Children Of The Future 1968</h5>
+                </div>
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/sailor_front.jpg" width="200">
+                    <h5>Sailor 1968</h5>
+                </div>
+                <div class="w3-third w3-container ">
+                    <img class="w3-image" src="assets/brave_new_world_front.jpg" width="200">
+                    <h5>Brave New World 1969</h5>
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/your_saving_grace_front.jpg" width="200">
+                    <h5>Your Saving Grace 1969</h5>
+                </div>
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/number_5_front.jpg" width="200">
+                    <h5>Number 5 1970</h5>
+                </div>
+                <div class="w3-third w3-container ">
+                    <img class="w3-image" src="assets/rock_love.jpg" width="200">
+                    <h5>Rock Love 1971</h5>
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/Recall_front.jpg" width="200">
+                    <h6>Recall the Beginning... A Journey from Eden 1972</h6>
+                </div>
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/joker_front.jpg" width="200">
+                    <h5>The Joker 1973</h5>
+                </div>
+                <div class="w3-third w3-container ">
+                    <img class="w3-image" src="assets/fly_like_an_eagle_front.jpg" width="200">
+                    <h5>Fly Like An Eagle 1976</h5>
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/book_of_dreams_front.jpg" width="200">
+                    <h5>Book Of Dreams 1977</h5>
+                </div>
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/circle_of_love_front.jpg" width="200">
+                    <h5>Circle Of Love 1981</h5>
+                </div>
+                <div class="w3-third w3-container ">
+                    <img class="w3-image" src="assets/abracadabra_front.jpg" width="200">
+                    <h5>Abracadabra 1982</h5>
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/live_front.jpg" width="200">
+                    <h5>Live! 1983</h5>
+                </div>
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/italian_xrays.jpg" width="200">
+                    <h5>Italian X Rays 1984</h5>
+                </div>
+                <div class="w3-third w3-container ">
+                    <img class="w3-image" src="assets/living_front.jpg" width="200">
+                    <h5>Living In The 20th Century 1986</h5>
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/born_front.jpg" width="200">
+                    <h5>Born 2B Blue 1992</h5>
+                </div>
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/bingo_front.jpg" width="200">
+                    <h5>Bingo! 2010</h5>
+                </div>
+                <div class="w3-third w3-container ">
+                    <img class="w3-image" src="assets/let_your_hair_down_front.jpg" width="200">
+                    <h5>Let Your Hair Down 2011</h5>
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/joker_live_front.jpg" width="200">
+                    <h5>Joker Live 2015</h5>
+                </div>
+                <div class="w3-third w3-container">
+                    <img class="w3-image" src="assets/hits_front.jpg" width="200">
+                    <h5>Ulimate Hits 2017</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="contact">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">CONTACT</h1>
+            <div class="w3-row w3-center">
+
+                <div class="w3-medium">
+                    <form class="w3-center" action="https://stevemillerband.us1.list-manage.com/subscribe/post" method="POST">
+                        <input type="hidden" name="u" value="b42a4772de974b690bbebd628">
+                        <input type="hidden" name="id" value="b464554a3f">
+                        <table cellpadding="7" cellspacing="0" width="100%" align="center" class="mergeTable">
+                            <tbody id="mergeTable">
+                                <tr class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+                                    <td class="formText" align="right">
+                                        <label for="MERGE0">Email Address
+                                            <span class="req asterisk">*</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+
+                                    </td>
+                                </tr>
+                                <tr class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
+                                    <td class="formText" align="right">
+                                        <label for="MERGE1">First Name</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr valign="top" id="merge-email_type-101" class="mergeRow mergeRow-interests-checkboxes">
+                                    <td class="formText" align="right">
+                                        Preferred format
+                                    </td>
+                                    <td>
+                                        <fieldset>
+                                            <legend style="display:none;">Preferred format</legend>
+                                            <input type="radio" name="EMAILTYPE" id="EMAILTYPE_HTML" value="html" checked>
+                                            <label for="EMAILTYPE_HTML">HTML</label>&nbsp; &nbsp;
+                                            <input type="radio" name="EMAILTYPE" id="EMAILTYPE_TEXT" value="text">
+                                            <label for="EMAILTYPE_TEXT">Plain-text</label>&nbsp; &nbsp;
+                                        </fieldset>
+                                    </td>
+                                </tr>
 
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="mc_submit_button">
+                                        <input type="submit" class="button" value="Subscribe to list">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="hidden" name="ht" value="e9ffaddf180e6c9a8880174b91cee135cc33338e:MTUxNTM3NjExMS41MjE4">
+                        <input type="hidden" name="mc_signupsource" value="hosted">
+                    </form>
 
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-    } else {
-        mySidebar.style.display = 'block';
-    }
-}
+                </div>
+            </div>
+        </div>
+    </div>
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+
+        <div class="w3-xlarge w3-section w3-hide-small">
+            <a href="http://www.facebook.com/stevemillerband" target="blank">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.instagram.com/stevemillerband.official/" target="blank">
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+            </a>
+            <a href="https://twitter.com/SMBofficial" target="blank">
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+            </a>
+            <a href="https://open.spotify.com/artist/6QtGlUje9TIkLrgPZrESuk?si=1XBzUKiYQfm2r8hcuDaMeg" target="blank">
+                <i class="fa fa-spotify w3-hover-opacity"></i>
+            </a>
+        </div>
+        <div class="w3-small">
+            Copyright 2018. Steve Miller Band
+        </div>
+    </footer>
+
+    <script>
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
 
 </body>
+
 </html>
